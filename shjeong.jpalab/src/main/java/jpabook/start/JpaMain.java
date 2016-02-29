@@ -1,7 +1,12 @@
 package jpabook.start;
 
-import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
 
 /**
  * @author holyeye
@@ -34,11 +39,12 @@ public class JpaMain {
 
     public static void logic(EntityManager em) {
 
-        String id = "id1";
+        String id = "id4";
         Member member = new Member();
         member.setId(id);
-        member.setUsername("지한");
-        member.setAge(2);
+        member.setUsername("선희");
+        member.setAge(25);
+        member.setCreatedDate(new Date());
 
         //등록
         em.persist(member);
@@ -55,7 +61,7 @@ public class JpaMain {
         System.out.println("members.size=" + members.size());
 
         //삭제
-        em.remove(member);
+        //em.remove(member);
 
     }
 }
