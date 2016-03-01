@@ -20,7 +20,7 @@ public class JpaMain {
         EntityManager em = emf.createEntityManager(); //엔티티 매니저 생성
 
         EntityTransaction tx = em.getTransaction(); //트랜잭션 기능 획득
-
+        
         try {
 
 
